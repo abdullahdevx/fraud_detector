@@ -7,11 +7,11 @@
   <!-- Section: Social media -->
   <section
            class="d-flex justify-content-between "
-           style="background-color: white"
+           style="background-color : white"
            >
   
     
-    <!-- Right -->
+    <!-- Right     .-->
   </section>
   <!-- Section: Social media -->
 

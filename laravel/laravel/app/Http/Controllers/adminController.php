@@ -8,7 +8,7 @@ use Illuminate\Http\Exception;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Review;
-use App\Models\Entity;
+use App\Models\Entity;             
 
 class adminController extends Controller
 {
