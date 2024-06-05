@@ -2,11 +2,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Response;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Entity;
+use App\Mail\VerificationEmail;
 
 class authController extends Controller
 {
@@ -22,6 +25,7 @@ class authController extends Controller
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => bcrypt($validated['password']),
+            'verification_token' => Str::random(60),
         ]);
         $sanctumToken = $user->createToken('userToken')->plainTextToken;
         $response = [
@@ -29,7 +33,7 @@ class authController extends Controller
             'token' => $sanctumToken,
             'message' => 'Registered Successfully',
         ];
-
+        Mail::to($user->email)->send(new VerificationEmail($user));
         return response($response, 201);
     }
     catch (\ValidationException $e) {
@@ -66,4 +70,13 @@ class authController extends Controller
         $user->tokens()->delete();
         return response()->json(['message' => 'LOGGED OUT Successfully'], 200);
     }
+
+    public function verifyEmail(Request $request)
+    {
+
+
+    }
+
+
+
 }

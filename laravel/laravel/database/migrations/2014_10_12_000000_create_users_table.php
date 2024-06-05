@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('user_image')->default('http://127.0.0.1:8000/storage/default_image.png');
+            $table->string('verification_token')->nullable();
             $table->integer('role')->default(0);
             $table->rememberToken();
             $table->timestamps();

@@ -27,9 +27,8 @@
 <div v-if="searchResult.length > 0 && searchData" class="container data">
     <div class="row">
         <div v-for="result in searchResult" :key="result.id" class="col-md-2">
-            <div class="border my-3 pt-1 pb-1 " v-on:click="showEntity(result.id)" @click="showModal = true" :class="{ enlarged: isHovered }"
-                    @mouseover="isHovered = true"
-                    @mouseout="isHovered = false">
+            <div class="border my-3 pt-1 pb-1 " v-on:click="showEntity(result.id)" @click="showModal = true"
+                >
                 <div>
                     <img :src="result.picture" alt="IMAGE" id="img" class="rounded"><br>
                     {{result.title}}<br>
