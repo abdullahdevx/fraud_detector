@@ -20,4 +20,10 @@ class Entity extends Model
     {
         return $this->reviews()->avg('rating');
     }
+
+    public function totalReviews()
+    {
+        return $this->reviews()->count('rating');
+
+    }
 }

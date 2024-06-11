@@ -18,6 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/verify-email/{token}', function () {
-    return view('email.verification');
-});
+Route::get('/verify-email/{token}', [authController::class, 'verifyEmail']);

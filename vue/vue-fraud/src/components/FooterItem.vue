@@ -29,54 +29,27 @@
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
           <p>
-            FRAUD DETECTOR INFO
+            FRAUD DETECTOR
           </p>
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold">Products</h6>
-          <hr
-              class="mb-4 mt-0 d-inline-block mx-auto"
-              style="width: 60px; background-color: #7c4dff; height: 2px"
-              />
-          <p>
-            <a href="#!" class="text-white">MDBootstrap</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white">MDWordPress</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white">BrandFlow</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white">Bootstrap Angular</a>
-          </p>
-        </div>
-        <!-- Grid column -->
+     
 
         <!-- Grid column -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold">Useful links</h6>
+          <h6 class="text-uppercase fw-bold">links</h6>
           <hr
               class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
           <p>
-            <a href="#!" class="text-white">Your Account</a>
+            <router-link to="/account" class="text-white">Your Account</router-link>
           </p>
           <p>
-            <a href="#!" class="text-white">Become an Affiliate</a>
+            <router-link to="/about" class="text-white">About Us</router-link>
           </p>
-          <p>
-            <a href="#!" class="text-white">Shipping Rates</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white">Help</a>
-          </p>
+        
+         
         </div>
         <!-- Grid column -->
 
@@ -88,9 +61,9 @@
               class="mb-4 mt-0 d-inline-block mx-auto"
               style="width: 60px; background-color: #7c4dff; height: 2px"
               />
-          <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-          <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-          <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-home mr-3"></i> Address</p>
+          <p><i class="fas fa-envelope mr-3"></i> frauddetectorofficial@gmail.com</p>
+          <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p> 
           <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
         </div>
         <!-- Grid column -->
@@ -105,7 +78,7 @@
        class="text-center p-3"
        style="background-color: rgba(0, 0, 0, 0.2)"
        >
-    © 2020 Copyright:
+    © 2024 Copyright:
     <a class="text-white" href=""
        >Fraud Detector</a
       >
@@ -125,12 +98,14 @@
    
    <!-- Add "scoped" attribute to limit CSS to this component only -->
    <style scoped>
+   
 #footer {
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    padding-top: 225px;
     width: 100%;
     /* other styles as needed */
 }
+
 
    </style>
    

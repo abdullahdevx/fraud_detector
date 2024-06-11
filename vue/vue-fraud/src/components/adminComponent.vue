@@ -16,7 +16,8 @@
                 <div class="d-flex justify-content-center">
                         <star-rating class="content-center" :show-rating="false" :rating="result.totalRating" :max-rating="5" :star-size="18"></star-rating>
                     </div>
-                <button class="btn btn-danger" v-on:click="deleteEntity(result.id)"> DELETE </button>
+                  
+                <button class="btn btn-danger ps-1 pe-1 pt-1 pb-1 mt-2" v-on:click="deleteEntity(result.id)"> DELETE </button>
               </div>
             </div>
           </div>
@@ -31,10 +32,11 @@
       <span class="close" @click="showModal = false">&times;</span>
       <form id="appForm">
         <!--form fields-->
-        <h3>ADD AN APP</h3>
         <br>
-        <input required v-model="title" type="text" placeholder="Enter Title" />
-     <input v-model="description" type="text" placeholder="Enter Description" style="width: 400px; height: 130px;"/>
+        <h3>ADD AN APP</h3>
+        <br><br>
+        <input required v-model="title" type="text" placeholder="Enter Title" style="width: 400px; " />
+     <textarea v-model="description" type="text" placeholder="   Enter Description" style="width: 400px; height: 130px;"></textarea>
      <input @change="handleFileUpload" class="fileUpload" type="file" placeholder="Enter Description" />
      <input v-model="url" type="text" placeholder="App URL" style="width: 400px;"/>
      <button class="btn btn-success" v-on:click.prevent="submitApp()"> SUBMIT</button>
@@ -193,8 +195,8 @@ async mounted()
   padding: 10px;
 }
 #img123{
-   width: 150px;
-  height: 150px;
+   width: 180px;
+  height: 170px;
 
 }
 /* The Modal (background) */
@@ -218,7 +220,8 @@ async mounted()
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
+  height: 90%;
 }
 
 /* The Close Button */
@@ -243,7 +246,7 @@ async mounted()
          margin-bottom: 10px;
          margin-left: auto;
          margin-right: auto;
-         border: 1px solid skyblue;
+         /* border: 1px solid skyblue; */
  
 }
 

@@ -23,6 +23,7 @@ class userController extends Controller
         'title' => $entity->title,
         'picture' => $entity->picture,
         'totalRating' => $entity->getTotalRating(),
+        'totalReviews' => $entity->totalReviews(),
         ];
         });
 
@@ -45,6 +46,7 @@ class userController extends Controller
             'description' => $entity->description,
             'url' => $entity->url,
             'totalRating' => $entity->getTotalRating(),
+            'totalReviews' =>$entity->totalReviews(),
         ];
 
         $reviews = Review::with('userBelongsTo', 'entityBelongsTo')->where('entity_id', $id)->get();
@@ -85,6 +87,10 @@ class userController extends Controller
         if($existingReview) {
              return response()->json(['error' => 'You have already reviewed this entity'], 409);
          }
+         elseif($user->email_verified_at == null)
+         {          
+            return response()->json(['error' => 'UnAuthorized'], 401);
+         }
          else
          {
         $review = new Review;
@@ -124,6 +130,7 @@ class userController extends Controller
                 'title' => $entity->title,
                 'picture' => $entity->picture,
                 'totalRating' => $entity->getTotalRating(),
+                'totalReviews' => $entity->totalReviews(),
             ];
         } else {
             // If more than one entity found
@@ -133,6 +140,7 @@ class userController extends Controller
                     'title' => $entity->title,
                     'picture' => $entity->picture,
                     'totalRating' => $entity->getTotalRating(),
+                    'totalReviews' => $entity->totalReviews(),
                 ];
             });
         }

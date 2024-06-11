@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Entity;
 use App\Mail\VerificationEmail;
+use Carbon\Carbon;
 
 class authController extends Controller
 {
@@ -71,12 +72,13 @@ class authController extends Controller
         return response()->json(['message' => 'LOGGED OUT Successfully'], 200);
     }
 
-    public function verifyEmail(Request $request)
+    public function verifyEmail(Request $request, $token)
     {
-
-
+        $verificationToken = $token;
+        $user = User::where('verification_token', $verificationToken)->first();
+        $user->email_verified_at = now();
+        $user->save();
+        return view('emails.thankyou');
     }
-
-
 
 }

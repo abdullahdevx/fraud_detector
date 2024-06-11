@@ -2,7 +2,8 @@
   <div id="navbar">
   <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
-    <router-link class="navbar-brand" to="/">FRAUD DETECTOR</router-link>
+    <img src="@/assets/imagenavbar.png" />
+    <router-link class="navbar-brand" to="/">RAUD DETECTOR</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,8 +15,8 @@
       </ul>
     </div>
 
-      <form class="d-flex me-4">
-        <input v-model="searchData" class="form-control me-1" type="search" placeholder="Search An App" aria-label="Search" style="width: 300px;">
+      <form class="d-flex me-2">
+        <input v-model="searchData" class="form-control me-1" type="search" placeholder="Search an app" aria-label="Search" style="width: 300px;">
         <!-- <button id="search" class="btn btn-primary" type="submit">Search</button> -->
       </form>
       
@@ -33,7 +34,7 @@
         <ul v-if="isLoggedIn" class="navbar-nav mb-2 mb-lg-0 me-2">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            </a>
+            Account</a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li><router-link class="dropdown-item pb-0" to="/account">My Account</router-link></li>
             <li><hr class="dropdown-divider"></li>
@@ -97,11 +98,7 @@ created()
       const userStore = useMyStore();
       userStore.setUserInfo();
     }
- 
-
  },
-
-  
     methods:{
           logoutToast()
             {

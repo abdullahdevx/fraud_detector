@@ -82,9 +82,8 @@ import 'vue3-toastify/dist/index.css'
             if(error.response.data.errors.email)
             {
               this.customEmailToast();
-}
+              }
             } 
-
 
         }
       }

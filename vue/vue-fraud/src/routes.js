@@ -3,6 +3,8 @@ import SignUp from './components/SignUp.vue'
 import loginComponent from './components/loginComponent.vue'
 import adminComponent from './components/adminComponent.vue'
 import UserAccount from './components/UserAccount.vue'
+import AboutUs from './components/AboutUs.vue'
+
 
 
 
@@ -13,6 +15,12 @@ const routes = [
         name:'Home',
         component: HomeComponent,
         path:'/',
+
+    },
+    {
+        name:'AboutUs',
+        component: AboutUs,
+        path:'/about',
 
     },
     {

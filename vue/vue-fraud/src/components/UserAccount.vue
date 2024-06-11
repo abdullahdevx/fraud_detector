@@ -2,17 +2,19 @@
 <br>
 <h1>My Account</h1>
 <br>
+<br>
 <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="border-end   col-md-6">
           <div class=" my-3 pt-2 pb-2 ">
             <div>
               
              <h5>PROFILE PICTURE</h5>
-              <img :src="picture" alt="IMAGE" id="img" class="rounded-circle" ><br><br>
-              <input type="file" @change="handleFileUpload" />
 <br>
-              <button class="btn btn-success" v-on:click="changePicture()">CHANGE</button>
+             <img :src="picture" alt="IMAGE" id="img" class="rounded-circle" ><br><br>
+              <input class="ps-5" type="file" @change="handleFileUpload" />
+<br>
+              <button class="btn btn-success pt-1 pb-1 mt-2" v-on:click="changePicture()">CHANGE</button>
 
             </div>
           </div>
@@ -21,7 +23,8 @@
           <div class=" my-3 pt-2 pb-2 ">
             <div class=" ps-5 ">
            <h5>ACCOUNT DETAILS </h5>
-          <div class=" ps-6 text-start"> 
+           <br>
+          <div class=" ps-5 text-start"> 
            <b>
               Name: {{name}} <br>
               Email: {{email}}
@@ -121,7 +124,7 @@ export default{
 <style scoped>
 #img{
 
-  width: 190px; 
+  width: 220px; 
   height: 200px;
 
 }
